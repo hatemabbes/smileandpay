@@ -1,0 +1,36 @@
+.label-header-section {
+  margin-top: 5%;
+}
+ion-slides {
+  --bullet-background-active: #162860;
+}
+ion-content {
+  --offset-bottom: 3px !important;
+}
+.slides {
+  margin-top: 30%;
+  height: 100%;
+  .slide {
+    margin-bottom: 7%;
+    display: block;
+    .titre-slide {
+      margin: 2% 0;
+      font-size: 22px;
+    }
+    .image-slide {
+      width: 74%;
+      height: 35%;
+      .description-slide {
+        margin-top: 1%;
+        font-size: 15px;
+        padding: 16px 16px 0 16px;
+      }
+    }
+  }
+}
+
+ion-footer {
+  background: #fafbff;
+  border-color: #fafbff;
+  width: 100%;
+}

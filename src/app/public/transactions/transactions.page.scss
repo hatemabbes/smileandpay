@@ -1,0 +1,40 @@
+ion-item-option {
+  background: #fafbff;
+  ion-icon {
+    font-size: 20px;
+    margin-right: 2px;
+  }
+}
+ion-select {
+  --padding-bottom: 0;
+  --padding-top: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+  max-width: 100% !important;
+  margin-top: -10px;
+  color: #162860;
+}
+.icon-arrow-down {
+  margin-top: -5px;
+}
+
+ion-item {
+  --background: #fafbff !important ;
+  --border-color: #fafbff !important ;
+  --highlight-color-focused: white !important;
+  --highlight-color-valid: white !important;
+}
+.transactions-section {
+  width: 100%;
+}
+.separator {
+  height: 20px;
+  background-color: #fafbff;
+}
+.list-md {
+  padding-top: 0 !important;
+}
+
+ion-select {
+  --padding-end: 10px;
+}

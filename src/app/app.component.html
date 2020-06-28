@@ -1,3 +1,28 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" contentId="main" [swipeGesture]="false">
+    <ion-content>
+      <div class="menu-header-bg"></div>
+      <div class="header-content">
+        <img src="../assets/images/avatar.jpeg" alt="">
+        <ion-label>
+          <h2>Hatem ABBES</h2>
+          <p> Développeur FullStack</p>
+        </ion-label>
+
+      </div>
+
+      <ion-list class="menu-items" lines="none">
+        <ion-item (click)="navigateToTransactionPage()" [ngClass]="{'transaction-active': currentRoute === '/transactions'}" >
+          <ion-icon slot="start" name="browsers-outline"></ion-icon> Mes transactions
+        </ion-item>
+        <ion-item (click)="navigateToRecapitulatifPage()" [ngClass]="{'recapitulatif-active': currentRoute === '/recapitulatif'}">
+            <ion-icon  slot="start" name="pie-chart-outline"></ion-icon> Mon récapitulatif
+          </ion-item>
+          <ion-item (click)="logout()" >
+              <ion-icon slot="start" name="exit-outline"></ion-icon> Déconnexion
+            </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

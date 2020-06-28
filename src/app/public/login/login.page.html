@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar mode="ios">
+
+    <header-logo></header-logo>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="page-container">
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating"> <span class="blue-600"> Identifiant/Mail </span> </ion-label>
+          <ion-input color="black" [(ngModel)]="mail" type="email"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating"> <span class="blue-600">Mot de passe </span></ion-label>
+          <ion-input [type]="passwordType" clearOnEdit="false" [(ngModel)]="password">
+          </ion-input>
+          <ion-icon slot="end" [name]="passwordIcon" class="icon-eye-password" (click)='hideShowPassword()'></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="font-17 ">
+          Utilisez <span class="blue-600 text-bold">Hatem </span> comme Id et <span class="blue-600 text-bold">123456Aa
+          </span> comme mot de passe
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="login()" Size="large" expand="block">
+          Connexion
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

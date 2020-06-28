@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <header-logo></header-logo>
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="text-bold text-center blue-600">
+          <ion-icon slot="start" name="browsers-outline"></ion-icon> Mes transactions
+        </div>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col offset="1">
+        <div class="text-bold text-center blue-600">
+          <ion-item>
+            <ion-select class="font-15" (ionChange)="selectItem(filterSelected)" interface="action-sheet"
+              [(ngModel)]="filterSelected" placeholder="Veuillez séléctionner un filtre" appNoArrow>
+              <ion-select-option value="amountUp"> Montant de transaction croissant </ion-select-option>
+              <ion-select-option value="amountDown"> Montant de transaction décroissant </ion-select-option>
+              <ion-select-option value="dateUp"> Date de transaction croissant </ion-select-option>
+              <ion-select-option value="dateDown"> Date de transaction décroissant </ion-select-option>
+
+            </ion-select>
+            <ion-icon class="icon-arrow-down" name="chevron-down-outline"></ion-icon>
+          </ion-item>
+        </div>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-list>
+      <ng-container *ngFor="let item of items; let i = index">
+        <transaction [item]="item" [items]="items"></transaction>
+        <div *ngIf="i<=items.length" class="separator"></div>
+      </ng-container>
+
+    </ion-list>
+    <ion-row *ngIf="!infiniteScrollDisabled">
+      <ion-col>
+        <ion-infinite-scroll threshold="100px" (ionInfinite)="getData($event)">
+          <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="chargement en cours...">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

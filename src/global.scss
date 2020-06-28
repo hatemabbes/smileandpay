@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,78 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-content {
+  --background: #fafbff;
+  padding-bottom: 120px !important;
+}
+ion-toolbar {
+  --background: #fafbff;
+  --border-color: #fafbff;
+  --min-height: 60px;
+}
+.footer-md:before {
+  height: 0!important;
+}
+.footer-ios:before {
+  height: 0!important;
+}
+ion-list {
+  --background: #fafbff;
+  --border-color: #fafbff;
+}
+ion-button {
+  --background: #162860;
+}
+ion-back-button {
+  --color: #162860;
+}
+ion-icon {
+  color: #162860;
+}
+ion-menu-button {
+  --color: #162860;
+}
+
+
+ion-input{
+  --padding-top	: 0px!important;
+  --padding-bottom : 0px!important;;
+}
+
+.white {
+  color: white;
+}
+.jaune {
+  color: #fdee76;
+}
+.blue-600 {
+  color: #162860 !important;
+}
+.black {
+  color: #000000;
+}
+.red {
+  color: #eb445a;
+}
+.green {
+  color: #2dd36f;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-center {
+  text-align: center;
+}
+.font-25 {
+  font-size: 25px;
+}
+.font-20 {
+  font-size: 20px;
+}
+.font-15 {
+  font-size: 15px;
+}
+.font-10 {
+  font-size: 10px;
+}

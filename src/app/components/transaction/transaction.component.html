@@ -1,0 +1,33 @@
+<ion-item-sliding *ngIf="transaction">
+    <ion-item>
+      <ion-row class="transactions-section">
+        <ion-col size="6">
+          <div *ngIf="transaction.amount">
+            <ion-icon name="cash-outline"></ion-icon> {{transaction.amount}} €
+          </div>
+          <div *ngIf="transaction.type">
+            <ion-icon name="list-outline"></ion-icon> {{transaction.type}}
+          </div>
+          <div *ngIf="transaction.mode">
+            <ion-icon name="server-outline"></ion-icon> {{transaction.mode}}
+          </div>
+
+        </ion-col>
+        <ion-col size="6">
+          <div *ngIf="transaction.datetime">
+            <ion-icon name="calendar-outline"></ion-icon> {{transaction.datetime |  date:'EEE dd/MM/yyyy':'':'fr'}}
+          </div>
+          <div *ngIf="transaction.commentaire">
+            <ion-icon name="albums-outline"></ion-icon>
+            {{transaction.commentaire}}
+          </div>
+
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option (click)="deleteItem(transaction)">
+        <ion-icon slot="start" name="trash-outline"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>

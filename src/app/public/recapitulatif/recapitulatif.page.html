@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <header-logo></header-logo>
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="text-bold text-center blue-600">
+          <ion-icon slot="start" name="pie-chart-outline"></ion-icon> Mon récapitulatif
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="recap-section">
+      <ion-col size="6">
+        <div class="text-center font-20 text-bold"> Crédit </div>
+        <ion-item>
+          <div>
+            <ion-icon color="success" name="cash-outline"></ion-icon><span class="green"> + {{credit}} € </span>
+          </div>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <div class="text-center font-20 text-bold"> Débit </div>
+        <ion-item>
+          <div>
+            <ion-icon color="danger" name="cash-outline"></ion-icon> <span class="red"> - {{debit}} € </span>
+          </div>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="7" offset="3" class="total-section">
+        <div class="text-center font-20 text-bold"> Total </div>
+        <ion-item>
+          <div>
+            <ion-icon [color]="buttonColor" name="cash-outline"></ion-icon> <span
+              [ngClass]="{'red': total <0, 'green':total >= 0 }"> {{stateAccount}} {{total}} € </span>
+          </div>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
